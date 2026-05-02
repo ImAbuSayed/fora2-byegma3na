@@ -20,8 +20,8 @@
     <meta property="og:type" content="music.song">
     <meta property="og:url" content="https://imabusayed.github.io/fora2-byegma3na/">
     <meta property="og:site_name" content="Abu Sayed Music">
-    
-    
+    <meta property="article:modified_time" content="2026-04-20 21:55:30">
+    <meta name="last-modified" content="2026-04-20 21:55:30">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fora2 Byegma3na - Original Lyrics by Abu Sayed">
     <meta name="twitter:description" content="Official lyrics for &#x27;Fora2 Byegma3na&#x27;, an original song written, composed, created, and owned by Abu Sayed.">
@@ -121,13 +121,14 @@
         "@id": "https://abusayed.com.bd/#person"
       },
       "copyrightNotice": "Copyright © 2026 Abu Sayed. All rights reserved. Original lyrics, writing, composition, and creative authorship by Abu Sayed.",
-      "inLanguage": "en"
+      "inLanguage": "en",
+      "dateModified": "2026-04-20 21:55:30"
     },
     {
       "@type": "CreativeWork",
       "@id": "https://imabusayed.github.io/fora2-byegma3na#lyrics",
       "name": "Fora2 Byegma3na Lyrics",
-      "text": "[Clean lyric will be pushed here]",
+      "text": "يا حبيبي يا نور عيني\nنار الشوق بقلبي تقيد.. بقلبي تقيد..\nتعالى نام بين إيدي\nمعاك أحلامي تزيد\nमेरे दिल की तू धड़कन\nतुझसे है मेरी जान.. मेरी जान..\nतेरी आँखों में मैं खो जाऊँ\nतू ही मेरा अरमान\nYou are the light in my dark\nI feel your touch in my soul.. in my soul..\nTake my hand and hold me close\nTogether we are whole\nতোমাকে দেখেছি প্রথম যেদিন\nথমকে গেছে আমার সময়\nচোখের ভাষায় কি যেন বলে\nভালোবাসার এই তো শুরু হয়.. শুরু হয়..\nकैसे बताऊँ क्या हाल है\nयह दिल हुआ बेकरार.. बेकरार..\nबस तेरी ही प्यास है\nकब होगा तेरा दीदार\nতুমি আমার পরাণ পাখি.. পরাণ পাখি..\nতোমায় ছাড়া বাঁচি কেমনে\nএই বুকেতে তোমায় রাখি\nতুমি আছো আমার মনে.. আমার মনে..\nروحي معاك طايرة في السماء\nمن غيرك أنا كأني غريب\nأنت دائي وأنت الدواء\nخليك جنبي يا أغلى حبيب.. أغلى حبيب..\nਇੱਕ ਵਾਰੀ ਆਜਾ ਮੇਰੇ ਕੋਲ\nਦਿਲ ਦੀਆਂ ਗੱਲਾਂ ਤੈਨੂੰ ਦੱਸਾਂ.. ਤੈਨੂੰ ਦੱਸਾਂ..\nਮਿੱਠੇ ਮਿੱਠੇ ਤੇਰੇ ਬੋਲ\nਤੇਰੇ ਨਾਲ ਹੀ ਮੈਂ ਹੱਸਾਂ\nإنت الحب اللي بتمناه.. بتمناه..\nفي عيونك شفت الأمان\nمعاك لقيت للحياة معنى\nحبك في قلبي من زمان.. من زمان..\nतेरे बिना यह रातें लंबी\nतेरे बिना दिन ना ढले.. ना ढले..\nदिल में छुपा है एक तूफ़ान\nना जाने यह दिल क्या कहे\nيا رب خليك ليا\nأنا قلبي دايب في هواك.. في هواك..\nإنت الروح اللي فيا\nعمري ما هنسى غرامك\nতুমি আমার পরাণ পাখি.. পরাণ পাখি..\nতোমায় ছাড়া বাঁচি কেমনে\nএই বুকেতে তোমায় রাখি\nতুমি আছো আমার মনে.. আমার মনে..\nਤੂੰ ਹੀ ਮੇਰੀ ਜਾਨ ਢੋਲਣਾ\nਤੇਰੇ ਬਿਨਾਂ ਮੈਂ ਅਧੂਰਾ.. ਮੈਂ ਅਧੂਰਾ..\nਸੱਚੇ ਪਿਆਰ ਨੂੰ ਨਾ ਰੋਲਣਾ\nਸਾਡਾ ਪਿਆਰ ਹੋਵੇ ਪੂਰਾ\nShadows dance across your skin tonight\nFeel the fire burning deep within\nLost in the rhythm, holding you tight\nOne name in the rhythm… Sayed….. Sayed… Sayed…..\nEvery heartbeat pulls you closer to me\nWe fall together into eternity.. eternity..\nतू ही मेरी मंज़िल है.. मंज़िल है..\nतू ही मेरी है पनाह\nअब तो यह दिल तेरा है\nबस तेरी ही है चाह.. तेरी चाह..\nيا حبيبي لا تروح\nخليك معايا في الأحلام.. في الأحلام..\nحبك بيشفي الجروح\nأنت أجمل غرام.. أجمل غرام..\nimport re\ndef test_lyrics_structure():\nwith open('lyric-raw.txt', 'r', encoding='utf-8') as f:\ncontent = f.read()\n# Check for  and  tags\nassert '' in content or '' in content, \"Missing Male/Female tags\"\n# Check if Bridge is 6 lines\nbridge_match = re.search(r'\\\\s*(?:\\\\s*)?((?:.+\\n?){6})', content)\nassert bridge_match, \"Bridge does not have 6 lines or is missing\"\n# Check if Sayed is in the bridge\nassert 'Sayed' in bridge_match.group(1), \"Sayed is missing from the bridge\"\nprint.. \"All tests passed!\"..\nif __name__ == '__main__':\ntest_lyrics_structure()",
       "author": {
         "@id": "https://abusayed.com.bd/#person"
       },
@@ -140,7 +141,9 @@
       "copyrightNotice": "Copyright © 2026 Abu Sayed. All rights reserved. Original lyrics, writing, composition, and creative authorship by Abu Sayed.",
       "license": "https://github.com/ImAbuSayed/fora2-byegma3na/blob/main/LICENSE.md",
       "isAccessibleForFree": true,
-      "url": "https://imabusayed.github.io/fora2-byegma3na/"
+      "url": "https://imabusayed.github.io/fora2-byegma3na/",
+      "dateCreated": "2026-04-20 21:55:30",
+      "dateModified": "2026-04-20 21:55:30"
     },
     {
       "@type": "MusicComposition",
@@ -178,6 +181,7 @@
       "license": "https://github.com/ImAbuSayed/fora2-byegma3na/blob/main/LICENSE.md",
       "isAccessibleForFree": true,
       "keywords": "Fora2 Byegma3na, Abu Sayed lyrics, original song lyrics, Abu Sayed original song, Abu Sayed lyricist, Abu Sayed composer, Abu Sayed songwriter, official lyrics",
+      "dateModified": "2026-04-20 21:55:30",
       "sameAs": [
         "https://abusayed.com.bd",
         "https://music.abusayed.com.bd",
@@ -549,14 +553,14 @@
             <meta itemprop="name" content="Fora2 Byegma3na Lyrics">
             <meta itemprop="license" content="https://github.com/ImAbuSayed/fora2-byegma3na/blob/main/LICENSE.md">
             <meta itemprop="copyrightNotice" content="Copyright © 2026 Abu Sayed. All rights reserved. Original lyrics, writing, composition, and creative authorship by Abu Sayed.">
-            
+            <meta itemprop="dateCreated" content="2026-04-20 21:55:30">
             <div hidden aria-hidden="true">
                 <div itemprop="author creator copyrightHolder" itemscope itemtype="https://schema.org/Person">
                     <meta itemprop="name" content="Abu Sayed">
                     <meta itemprop="url" content="https://abusayed.com.bd/">
                 </div>
             </div>
-            <div itemprop="text" property="text">[Clean lyric will be pushed here]</div>
+            <div itemprop="text" property="text">يا حبيبي يا نور عيني<br>نار الشوق بقلبي تقيد.. بقلبي تقيد..<br>تعالى نام بين إيدي<br>معاك أحلامي تزيد<br>मेरे दिल की तू धड़कन<br>तुझसे है मेरी जान.. मेरी जान..<br>तेरी आँखों में मैं खो जाऊँ<br>तू ही मेरा अरमान<br>You are the light in my dark<br>I feel your touch in my soul.. in my soul..<br>Take my hand and hold me close<br>Together we are whole<br>তোমাকে দেখেছি প্রথম যেদিন<br>থমকে গেছে আমার সময়<br>চোখের ভাষায় কি যেন বলে<br>ভালোবাসার এই তো শুরু হয়.. শুরু হয়..<br>कैसे बताऊँ क्या हाल है<br>यह दिल हुआ बेकरार.. बेकरार..<br>बस तेरी ही प्यास है<br>कब होगा तेरा दीदार<br>তুমি আমার পরাণ পাখি.. পরাণ পাখি..<br>তোমায় ছাড়া বাঁচি কেমনে<br>এই বুকেতে তোমায় রাখি<br>তুমি আছো আমার মনে.. আমার মনে..<br>روحي معاك طايرة في السماء<br>من غيرك أنا كأني غريب<br>أنت دائي وأنت الدواء<br>خليك جنبي يا أغلى حبيب.. أغلى حبيب..<br>ਇੱਕ ਵਾਰੀ ਆਜਾ ਮੇਰੇ ਕੋਲ<br>ਦਿਲ ਦੀਆਂ ਗੱਲਾਂ ਤੈਨੂੰ ਦੱਸਾਂ.. ਤੈਨੂੰ ਦੱਸਾਂ..<br>ਮਿੱਠੇ ਮਿੱਠੇ ਤੇਰੇ ਬੋਲ<br>ਤੇਰੇ ਨਾਲ ਹੀ ਮੈਂ ਹੱਸਾਂ<br>إنت الحب اللي بتمناه.. بتمناه..<br>في عيونك شفت الأمان<br>معاك لقيت للحياة معنى<br>حبك في قلبي من زمان.. من زمان..<br>तेरे बिना यह रातें लंबी<br>तेरे बिना दिन ना ढले.. ना ढले..<br>दिल में छुपा है एक तूफ़ान<br>ना जाने यह दिल क्या कहे<br>يا رب خليك ليا<br>أنا قلبي دايب في هواك.. في هواك..<br>إنت الروح اللي فيا<br>عمري ما هنسى غرامك<br>তুমি আমার পরাণ পাখি.. পরাণ পাখি..<br>তোমায় ছাড়া বাঁচি কেমনে<br>এই বুকেতে তোমায় রাখি<br>তুমি আছো আমার মনে.. আমার মনে..<br>ਤੂੰ ਹੀ ਮੇਰੀ ਜਾਨ ਢੋਲਣਾ<br>ਤੇਰੇ ਬਿਨਾਂ ਮੈਂ ਅਧੂਰਾ.. ਮੈਂ ਅਧੂਰਾ..<br>ਸੱਚੇ ਪਿਆਰ ਨੂੰ ਨਾ ਰੋਲਣਾ<br>ਸਾਡਾ ਪਿਆਰ ਹੋਵੇ ਪੂਰਾ<br>Shadows dance across your skin tonight<br>Feel the fire burning deep within<br>Lost in the rhythm, holding you tight<br>One name in the rhythm… Sayed….. Sayed… Sayed…..<br>Every heartbeat pulls you closer to me<br>We fall together into eternity.. eternity..<br>तू ही मेरी मंज़िल है.. मंज़िल है..<br>तू ही मेरी है पनाह<br>अब तो यह दिल तेरा है<br>बस तेरी ही है चाह.. तेरी चाह..<br>يا حبيبي لا تروح<br>خليك معايا في الأحلام.. في الأحلام..<br>حبك بيشفي الجروح<br>أنت أجمل غرام.. أجمل غرام..<br>import re<br>def test_lyrics_structure():<br>with open(&#x27;lyric-raw.txt&#x27;, &#x27;r&#x27;, encoding=&#x27;utf-8&#x27;) as f:<br>content = f.read()<br># Check for  and  tags<br>assert &#x27;&#x27; in content or &#x27;&#x27; in content, &quot;Missing Male/Female tags&quot;<br># Check if Bridge is 6 lines<br>bridge_match = re.search(r&#x27;\\s*(?:\\s*)?((?:.+\n?){6})&#x27;, content)<br>assert bridge_match, &quot;Bridge does not have 6 lines or is missing&quot;<br># Check if Sayed is in the bridge<br>assert &#x27;Sayed&#x27; in bridge_match.group(1), &quot;Sayed is missing from the bridge&quot;<br>print.. &quot;All tests passed!&quot;..<br>if __name__ == &#x27;__main__&#x27;:<br>test_lyrics_structure()</div>
         </article>
 
 
@@ -565,6 +569,11 @@
                 <div class="details-title">Song Timeline</div>
                 <div class="meta-grid">
                     
+                <div class="meta-card">
+                    <span class="meta-label">Lyric Written</span>
+                    <strong>April 20, 2026</strong>
+                </div>
+                
                 </div>
             </div>
             <div class="details-block">
