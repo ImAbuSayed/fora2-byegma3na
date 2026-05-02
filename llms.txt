@@ -19,7 +19,10 @@
 
 ## Excerpt
 
-> [Clean lyric will be pushed here]
+> يا حبيبي يا نور عيني
+> نار الشوق بقلبي تقيد.. بقلبي تقيد..
+> تعالى نام بين إيدي
+> معاك أحلامي تزيد
 > ...
 
 [View Full Lyrics ->](./lyrics.txt)
