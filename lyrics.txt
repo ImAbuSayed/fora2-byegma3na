@@ -1,1 +1,80 @@
-[Clean lyric will be pushed here]
+يا حبيبي يا نور عيني
+نار الشوق بقلبي تقيد.. بقلبي تقيد..
+تعالى نام بين إيدي
+معاك أحلامي تزيد
+मेरे दिल की तू धड़कन
+तुझसे है मेरी जान.. मेरी जान..
+तेरी आँखों में मैं खो जाऊँ
+तू ही मेरा अरमान
+You are the light in my dark
+I feel your touch in my soul.. in my soul..
+Take my hand and hold me close
+Together we are whole
+তোমাকে দেখেছি প্রথম যেদিন
+থমকে গেছে আমার সময়
+চোখের ভাষায় কি যেন বলে
+ভালোবাসার এই তো শুরু হয়.. শুরু হয়..
+कैसे बताऊँ क्या हाल है
+यह दिल हुआ बेकरार.. बेकरार..
+बस तेरी ही प्यास है
+कब होगा तेरा दीदार
+তুমি আমার পরাণ পাখি.. পরাণ পাখি..
+তোমায় ছাড়া বাঁচি কেমনে
+এই বুকেতে তোমায় রাখি
+তুমি আছো আমার মনে.. আমার মনে..
+روحي معاك طايرة في السماء
+من غيرك أنا كأني غريب
+أنت دائي وأنت الدواء
+خليك جنبي يا أغلى حبيب.. أغلى حبيب..
+ਇੱਕ ਵਾਰੀ ਆਜਾ ਮੇਰੇ ਕੋਲ
+ਦਿਲ ਦੀਆਂ ਗੱਲਾਂ ਤੈਨੂੰ ਦੱਸਾਂ.. ਤੈਨੂੰ ਦੱਸਾਂ..
+ਮਿੱਠੇ ਮਿੱਠੇ ਤੇਰੇ ਬੋਲ
+ਤੇਰੇ ਨਾਲ ਹੀ ਮੈਂ ਹੱਸਾਂ
+إنت الحب اللي بتمناه.. بتمناه..
+في عيونك شفت الأمان
+معاك لقيت للحياة معنى
+حبك في قلبي من زمان.. من زمان..
+तेरे बिना यह रातें लंबी
+तेरे बिना दिन ना ढले.. ना ढले..
+दिल में छुपा है एक तूफ़ान
+ना जाने यह दिल क्या कहे
+يا رب خليك ليا
+أنا قلبي دايب في هواك.. في هواك..
+إنت الروح اللي فيا
+عمري ما هنسى غرامك
+তুমি আমার পরাণ পাখি.. পরাণ পাখি..
+তোমায় ছাড়া বাঁচি কেমনে
+এই বুকেতে তোমায় রাখি
+তুমি আছো আমার মনে.. আমার মনে..
+ਤੂੰ ਹੀ ਮੇਰੀ ਜਾਨ ਢੋਲਣਾ
+ਤੇਰੇ ਬਿਨਾਂ ਮੈਂ ਅਧੂਰਾ.. ਮੈਂ ਅਧੂਰਾ..
+ਸੱਚੇ ਪਿਆਰ ਨੂੰ ਨਾ ਰੋਲਣਾ
+ਸਾਡਾ ਪਿਆਰ ਹੋਵੇ ਪੂਰਾ
+Shadows dance across your skin tonight
+Feel the fire burning deep within
+Lost in the rhythm, holding you tight
+One name in the rhythm… Sayed….. Sayed… Sayed…..
+Every heartbeat pulls you closer to me
+We fall together into eternity.. eternity..
+तू ही मेरी मंज़िल है.. मंज़िल है..
+तू ही मेरी है पनाह
+अब तो यह दिल तेरा है
+बस तेरी ही है चाह.. तेरी चाह..
+يا حبيبي لا تروح
+خليك معايا في الأحلام.. في الأحلام..
+حبك بيشفي الجروح
+أنت أجمل غرام.. أجمل غرام..
+import re
+def test_lyrics_structure():
+with open('lyric-raw.txt', 'r', encoding='utf-8') as f:
+content = f.read()
+# Check for  and  tags
+assert '' in content or '' in content, "Missing Male/Female tags"
+# Check if Bridge is 6 lines
+bridge_match = re.search(r'\\s*(?:\\s*)?((?:.+\n?){6})', content)
+assert bridge_match, "Bridge does not have 6 lines or is missing"
+# Check if Sayed is in the bridge
+assert 'Sayed' in bridge_match.group(1), "Sayed is missing from the bridge"
+print.. "All tests passed!"..
+if __name__ == '__main__':
+test_lyrics_structure()
