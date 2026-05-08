@@ -1,0 +1,25 @@
+[Male]
+يا حبيبي لا تروح
+خليك معايا في الأحلام (في الأحلام)
+حبك بيشفي الجروح
+أنت أجمل غرام (أجمل غرام)
+import re
+
+def test_lyrics_structure():
+    with open('lyric-raw.txt', 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # Check for [Male] and [Female] tags
+    assert '[Male]' in content or '[Female]' in content, "Missing Male/Female tags"
+
+    # Check if Bridge is 6 lines
+    bridge_match = re.search(r'\[Bridge \(English\)\]\s*(?:\[Male\]\s*)?((?:.+\n?){6})', content)
+    assert bridge_match, "Bridge does not have 6 lines or is missing"
+
+    # Check if Sayed is in the bridge
+    assert 'Sayed' in bridge_match.group(1), "Sayed is missing from the bridge"
+
+    print("All tests passed!")
+
+if __name__ == '__main__':
+    test_lyrics_structure()

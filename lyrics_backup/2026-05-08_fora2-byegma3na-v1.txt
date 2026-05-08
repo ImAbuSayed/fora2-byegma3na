@@ -1,0 +1,222 @@
+Title: Fora2 Byegma3na
+Clean Hash: 3a392ce0d1cdbc1889782e706de0ef96aaf48469e3d5ed3f6ece6fdb27826a16
+Raw Hash: 1d51f8eee94e1044d27425409acc3cc13e0b23284a4f777aeafa8433b5375e6d
+Date: 2026-05-08T23:56:30.607827
+Version: 1
+----------------------------------------
+[RAW LYRICS]
+[Hook (Arabic)]
+[Male]
+يا حبيبي يا نور عيني
+نار الشوق بقلبي تقيد (بقلبي تقيد)
+تعالى نام بين إيدي
+معاك أحلامي تزيد
+
+[Hook (Hindi)]
+[Female]
+मेरे दिल की तू धड़कन
+तुझसे है मेरी जान (मेरी जान)
+तेरी आँखों में मैं खो जाऊँ
+तू ही मेरा अरमान
+
+[Hook (English)]
+[Male]
+You are the light in my dark
+I feel your touch in my soul (in my soul)
+Take my hand and hold me close
+Together we are whole
+
+[Verse 1 (Bangla)]
+[Female]
+তোমাকে দেখেছি প্রথম যেদিন
+থমকে গেছে আমার সময়
+চোখের ভাষায় কি যেন বলে
+ভালোবাসার এই তো শুরু হয় (শুরু হয়)
+
+[Pre-Chorus 1 (Hindi)]
+[Male]
+कैसे बताऊँ क्या हाल है
+यह दिल हुआ बेकरार (बेकरार)
+बस तेरी ही प्यास है
+कब होगा तेरा दीदार
+
+[Chorus (Bangla)]
+[Female]
+তুমি আমার পরাণ পাখি (পরাণ পাখি)
+তোমায় ছাড়া বাঁচি কেমনে
+এই বুকেতে তোমায় রাখি
+তুমি আছো আমার মনে (আমার মনে)
+
+[Verse 2 (Arabic)]
+[Male]
+روحي معاك طايرة في السماء
+من غيرك أنا كأني غريب
+أنت دائي وأنت الدواء
+خليك جنبي يا أغلى حبيب (أغلى حبيب)
+
+[Pre-Chorus 2 (Punjabi)]
+[Female]
+ਇੱਕ ਵਾਰੀ ਆਜਾ ਮੇਰੇ ਕੋਲ
+ਦਿਲ ਦੀਆਂ ਗੱਲਾਂ ਤੈਨੂੰ ਦੱਸਾਂ (ਤੈਨੂੰ ਦੱਸਾਂ)
+ਮਿੱਠੇ ਮਿੱਠੇ ਤੇਰੇ ਬੋਲ
+ਤੇਰੇ ਨਾਲ ਹੀ ਮੈਂ ਹੱਸਾਂ
+
+[Chorus (Arabic)]
+[Male]
+إنت الحب اللي بتمناه (بتمناه)
+في عيونك شفت الأمان
+معاك لقيت للحياة معنى
+حبك في قلبي من زمان (من زمان)
+
+[Verse 3 (Hindi)]
+[Female]
+तेरे बिना यह रातें लंबी
+तेरे बिना दिन ना ढले (ना ढले)
+दिल में छुपा है एक तूफ़ान
+ना जाने यह दिल क्या कहे
+
+[Pre-Chorus 3 (Arabic)]
+[Male]
+يا رب خليك ليا
+أنا قلبي دايب في هواك (في هواك)
+إنت الروح اللي فيا
+عمري ما هنسى غرامك
+
+[Chorus (Bangla)]
+[Female]
+তুমি আমার পরাণ পাখি (পরাণ পাখি)
+তোমায় ছাড়া বাঁচি কেমনে
+এই বুকেতে তোমায় রাখি
+তুমি আছো আমার মনে (আমার মনে)
+
+[Verse 4 (Punjabi)]
+[Male]
+ਤੂੰ ਹੀ ਮੇਰੀ ਜਾਨ ਢੋਲਣਾ
+ਤੇਰੇ ਬਿਨਾਂ ਮੈਂ ਅਧੂਰਾ (ਮੈਂ ਅਧੂਰਾ)
+ਸੱਚੇ ਪਿਆਰ ਨੂੰ ਨਾ ਰੋਲਣਾ
+ਸਾਡਾ ਪਿਆਰ ਹੋਵੇ ਪੂਰਾ
+
+[Bridge (English)]
+[Male]
+Shadows dance across your skin tonight
+Feel the fire burning deep within
+Lost in the rhythm, holding you tight
+One name in the rhythm… Sayed… (Sayed… Sayed…)
+Every heartbeat pulls you closer to me
+We fall together into eternity (eternity)
+
+[Chorus (Hindi)]
+[Female]
+तू ही मेरी मंज़िल है (मंज़िल है)
+तू ही मेरी है पनाह
+अब तो यह दिल तेरा है
+बस तेरी ही है चाह (तेरी चाह)
+
+[Outro (Arabic)]
+[Male]
+يا حبيبي لا تروح
+خليك معايا في الأحلام (في الأحلام)
+حبك بيشفي الجروح
+أنت أجمل غرام (أجمل غرام)
+import re
+
+def test_lyrics_structure():
+    with open('lyric-raw.txt', 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Check for [Male] and [Female] tags
+    assert '[Male]' in content or '[Female]' in content, "Missing Male/Female tags"
+    
+    # Check if Bridge is 6 lines
+    bridge_match = re.search(r'\[Bridge \(English\)\]\s*(?:\[Male\]\s*)?((?:.+\n?){6})', content)
+    assert bridge_match, "Bridge does not have 6 lines or is missing"
+    
+    # Check if Sayed is in the bridge
+    assert 'Sayed' in bridge_match.group(1), "Sayed is missing from the bridge"
+    
+    print("All tests passed!")
+
+if __name__ == '__main__':
+    test_lyrics_structure()
+--------------------
+[CLEAN LYRICS]
+يا حبيبي يا نور عيني
+نار الشوق بقلبي تقيد.. بقلبي تقيد..
+تعالى نام بين إيدي
+معاك أحلامي تزيد
+मेरे दिल की तू धड़कन
+तुझसे है मेरी जान.. मेरी जान..
+तेरी आँखों में मैं खो जाऊँ
+तू ही मेरा अरमान
+You are the light in my dark
+I feel your touch in my soul.. in my soul..
+Take my hand and hold me close
+Together we are whole
+তোমাকে দেখেছি প্রথম যেদিন
+থমকে গেছে আমার সময়
+চোখের ভাষায় কি যেন বলে
+ভালোবাসার এই তো শুরু হয়.. শুরু হয়..
+कैसे बताऊँ क्या हाल है
+यह दिल हुआ बेकरार.. बेकरार..
+बस तेरी ही प्यास है
+कब होगा तेरा दीदार
+তুমি আমার পরাণ পাখি.. পরাণ পাখি..
+তোমায় ছাড়া বাঁচি কেমনে
+এই বুকেতে তোমায় রাখি
+তুমি আছো আমার মনে.. আমার মনে..
+روحي معاك طايرة في السماء
+من غيرك أنا كأني غريب
+أنت دائي وأنت الدواء
+خليك جنبي يا أغلى حبيب.. أغلى حبيب..
+ਇੱਕ ਵਾਰੀ ਆਜਾ ਮੇਰੇ ਕੋਲ
+ਦਿਲ ਦੀਆਂ ਗੱਲਾਂ ਤੈਨੂੰ ਦੱਸਾਂ.. ਤੈਨੂੰ ਦੱਸਾਂ..
+ਮਿੱਠੇ ਮਿੱਠੇ ਤੇਰੇ ਬੋਲ
+ਤੇਰੇ ਨਾਲ ਹੀ ਮੈਂ ਹੱਸਾਂ
+إنت الحب اللي بتمناه.. بتمناه..
+في عيونك شفت الأمان
+معاك لقيت للحياة معنى
+حبك في قلبي من زمان.. من زمان..
+तेरे बिना यह रातें लंबी
+तेरे बिना दिन ना ढले.. ना ढले..
+दिल में छुपा है एक तूफ़ान
+ना जाने यह दिल क्या कहे
+يا رب خليك ليا
+أنا قلبي دايب في هواك.. في هواك..
+إنت الروح اللي فيا
+عمري ما هنسى غرامك
+তুমি আমার পরাণ পাখি.. পরাণ পাখি..
+তোমায় ছাড়া বাঁচি কেমনে
+এই বুকেতে তোমায় রাখি
+তুমি আছো আমার মনে.. আমার মনে..
+ਤੂੰ ਹੀ ਮੇਰੀ ਜਾਨ ਢੋਲਣਾ
+ਤੇਰੇ ਬਿਨਾਂ ਮੈਂ ਅਧੂਰਾ.. ਮੈਂ ਅਧੂਰਾ..
+ਸੱਚੇ ਪਿਆਰ ਨੂੰ ਨਾ ਰੋਲਣਾ
+ਸਾਡਾ ਪਿਆਰ ਹੋਵੇ ਪੂਰਾ
+Shadows dance across your skin tonight
+Feel the fire burning deep within
+Lost in the rhythm, holding you tight
+One name in the rhythm… Sayed….. Sayed… Sayed…..
+Every heartbeat pulls you closer to me
+We fall together into eternity.. eternity..
+तू ही मेरी मंज़िल है.. मंज़िल है..
+तू ही मेरी है पनाह
+अब तो यह दिल तेरा है
+बस तेरी ही है चाह.. तेरी चाह..
+يا حبيبي لا تروح
+خليك معايا في الأحلام.. في الأحلام..
+حبك بيشفي الجروح
+أنت أجمل غرام.. أجمل غرام..
+import re
+def test_lyrics_structure():
+with open('lyric-raw.txt', 'r', encoding='utf-8') as f:
+content = f.read()
+# Check for  and  tags
+assert '' in content or '' in content, "Missing Male/Female tags"
+# Check if Bridge is 6 lines
+bridge_match = re.search(r'\\s*(?:\\s*)?((?:.+\n?){6})', content)
+assert bridge_match, "Bridge does not have 6 lines or is missing"
+# Check if Sayed is in the bridge
+assert 'Sayed' in bridge_match.group(1), "Sayed is missing from the bridge"
+print.. "All tests passed!"..
+if __name__ == '__main__':
+test_lyrics_structure()
